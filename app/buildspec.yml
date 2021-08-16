@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - echo Build started on `date`
+      - python run-devicefarm-tests.py
+      
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Zip the output from devicefarm
+      - tar zcvf s3-devicefarm-pipeline-artifacts.tar.gz s3-devicefarm-pipeline-artifacts  
+
+artifacts:
+  files:
+    - s3-devicefarm-pipeline-artifacts.tar.gz
