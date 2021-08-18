@@ -1,8 +1,8 @@
 {
-  "name": "s3-devicefarm-pipeline",
+  "name": "s3-df-pipeline",
   "version": "0.1.0",
   "bin": {
-    "s3-devicefarm-pipeline": "bin/s3-devicefarm-pipeline.js"
+    "s3-df-pipeline": "bin/s3-df-pipeline.js"
   },
   "scripts": {
     "build": "tsc",
@@ -22,6 +22,14 @@
   },
   "dependencies": {
     "@aws-cdk/core": "1.114.0",
+    "@aws-cdk/aws-iam": "1.114.0",
+    "@aws-cdk/aws-s3": "1.114.0",
+    "@aws-cdk/aws-s3-deployment": "1.114.0",
+    "@aws-cdk/aws-codepipeline": "1.114.0",
+    "@aws-cdk/aws-codepipeline-actions": "1.114.0",
+    "@aws-cdk/custom-resources": "1.114.0",
+    "@aws-cdk/aws-lambda": "1.114.0",
+    "@aws-cdk/aws-codebuild": "1.114.0",
     "source-map-support": "^0.5.16"
   }
 }
