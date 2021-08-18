@@ -59,6 +59,8 @@ def upload_df_file(filename, type_, mime='application/octet-stream'):
     print("")
     return upload_arn
 
+# Configuration tests Android apps with JAVA_TEST_NG. Modify the below two lines
+# to support Ios and other frameworks
 our_upload_arn = upload_df_file(config['appFilePath'], "ANDROID_APP")
 our_test_package_arn = upload_df_file(config['testPackage'], 'APPIUM_JAVA_TESTNG_TEST_PACKAGE')
 print(our_upload_arn, our_test_package_arn)
