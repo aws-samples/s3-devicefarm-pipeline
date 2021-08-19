@@ -53,6 +53,7 @@ chmod a+x uploadzip.sh
 - In case you are using a diffrent OS platform, make sure the device-pool created has appropriate devices (Android vs Ios). You can modify the devicepool by changing the devicepool rules specified in the `lib/s3-devicefarm-pipeline-stack.ts` file.
 
 - Codepipeline integrates directly with source repositories in Github, CodeCommit and Bitbucket. If you are using non-supported sources such as Gitlab, the source could be build in gitlab and binaries pushed to an S3 bucket as demonstrated in this example
+
 - In some environments, after installing the cdk using `npm install -g aws-cdk` you will need to add the cdk binary to your path before you can execute the cdk commands.
 
 ## Security
