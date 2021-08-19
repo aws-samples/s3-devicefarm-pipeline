@@ -1,6 +1,6 @@
 # Testing Mobile Apps in Devicefarm using a CI-CD pipeline
 
-The objective of this sample is to help you to build a CI-CD pipeline to test mobile devices using the AWS Devicefarm. The sample make use of the AWS Codepipeline service to connect build assets published to an Amazon S3 bucket to an AWS Devicefarm project. The code pipeline uses AWS CodeBuild for its testing stage to initiate the test runs on Devicefarm and gathers test results. These test results are then published back to an S3 bucket for further processing.
+The objective of this sample is to help you to build a CI-CD pipeline to test mobile devices using the AWS Devicefarm. The sample makes use of the AWS Codepipeline service to connect build assets published to an Amazon S3 bucket to an AWS Devicefarm project. The code pipeline uses AWS CodeBuild for its testing stage to initiate the test runs on Devicefarm and gathers test results. These test results are then published back to an S3 bucket for further processing.
 
 AWS Device Farm is an application testing service that lets you improve the quality of your web and mobile apps by testing them across an extensive range of desktop browsers and real mobile devices; without having to provision and manage any testing infrastructure. The service enables you to run your tests concurrently on multiple desktop browsers or real devices to speed up the execution of your test suite, and generates videos and logs to help you quickly identify issues with your app.
 
