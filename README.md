@@ -36,7 +36,7 @@ Please note that AWS Devicefarm not supported natively by the CDK at this time a
 - From the root folder of the repository run `cdk bootstrap` and then `cdk deploy`. This will create the devicefarm project and setup a devicepool for you. 
 - Note down the url of the s3 bucket created. 
 - To run the tests you need to have an Android apk and a TestNG distribution with all dependencies in the app folder. You can build the apk from our sample app code at  https://github.com/aws-samples/aws-device-farm-sample-app-for-android and the tests zip can created by building the project at https://github.com/aws-samples/aws-device-farm-appium-tests-for-sample-app
-- copy the output from the above builds to the app folder. The apk should be named 'app-debug.apk' and the tests zip should be named 'zip-with-dependencies.zip'
+- copy the output from the above builds to the `app` folder of this project. The apk should be named 'app-debug.apk' and the tests zip should be named 'zip-with-dependencies.zip'
 - Change the permissions and the execute the `./uploadzip.sh` command using the commands below. Replace `<s3-url>` with the url noted above 
 ```
 chmod a+x uploadzip.sh
