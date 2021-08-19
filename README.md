@@ -50,7 +50,7 @@ chmod a+x uploadzip.sh
 
 - Though this repo works with Android app and TestNG Java tests, it is possible to change the file `app/run-devicefarm-tests.py` to support IOS apps and all the other test frameworks supported by devicefarm
 
-- This repository includes sample app (app/app-debug.apk) and test case binaries (app/zip-with-dependencies.aip) for testing purpose. As the app is an Android binary and the test cases use the Java TestNG framework, the code that uploads these into Devicefarm uses appropriate configuration variables. You may need to change these variable in app/run-devicefarm-tests.py in case you use other test frameworks and app binaries like an IoS binary. Also make sure the device-pool created has appropriate devices (Android vs Ios). You can modify the devicepool by changing the devicepool rules specified in the `lib/s3-devicefarm-pipeline-stack.ts` file.
+- In case you are using a diffrent OS platform, make sure the device-pool created has appropriate devices (Android vs Ios). You can modify the devicepool by changing the devicepool rules specified in the `lib/s3-devicefarm-pipeline-stack.ts` file.
 
 - Codepipeline integrates directly with source repositories in Github, CodeCommit and Bitbucket. If you are using non-supported sources such as Gitlab, the source could be build in gitlab and binaries pushed to an S3 bucket as demonstrated in this example
 - In some environments, after installing the cdk using `npm install -g aws-cdk` you will need to add the cdk binary to your path before you can execute the cdk commands.
