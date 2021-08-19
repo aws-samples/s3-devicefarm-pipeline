@@ -8,11 +8,11 @@ AWS CodeBuild is a fully managed continuous integration service that compiles so
 
 AWS CodePipeline is a fully managed continuous delivery service that helps you automate your release pipelines for fast and reliable application and infrastructure updates. CodePipeline automates the build, test, and deploy phases of your release process every time there is a code change, based on the release model you define.
 
-# Architecture
+## Architecture
 
 ![S3 Devicefarm Pipeline](./devicefarm-cicd.png)
 
-# How it works
+## How it works
 
 This code sample uses the AWS CDK to deploy all the services used. 
 
@@ -28,7 +28,7 @@ The code build commands are configured using the buildspec.yml file inside the a
 
 Please note that AWS Devicefarm not supported natively by the CDK at this time and hence we use CDK custom resources to provision the necessary infrastructure.
 
-# Usage
+## Usage
 
 - Install CDK in your local environment - `npm install -g aws-cdk`
 - Clone the repository - `git clone https://github.com/aws-samples/s3-devicefarm-pipeline.git`
@@ -42,8 +42,9 @@ Please note that AWS Devicefarm not supported natively by the CDK at this time a
 chmod a+x uploadzip.sh
 ./uploadzip.sh <s3-url>
 ``` 
- 
-# Notes
+- The upload will trigger the codepipeline and execute a test run in the devicefarm project. The results of the execution will be available in the same s3 bucket under an artifacts folder.
+
+## Notes
 
 - AWS Devicefarm is only available in us-west-2 region. Hence the deployment is hard-coded to use us-west-2. See the env property in bin/s3-df-pipeline.ts
 
