@@ -14,7 +14,7 @@ AWS CodePipeline is a fully managed continuous delivery service that helps you a
 
 # How it works
 
-This code sample uses the AWS CDK to deploy all the services used. You can simply clone the project and execute `cdk deploy` to provision the resources
+This code sample uses the AWS CDK to deploy all the services used. 
 
 When deployment is done, you will have a devicefarm project with a device pool, an s3 bucket for storing app and test binaries as well as your test reults, an AWS CodeBuild project and an AWS CodePipeline for executing the CICD pipeline. 
 
@@ -35,8 +35,8 @@ Please note that AWS Devicefarm not supported natively by the CDK at this time a
 - From the root folder of the repository run `npm install`.
 - From the root folder of the repository run `cdk bootstrap` and then `cdk deploy`. This will create the devicefarm project and setup a devicepool for you. 
 - Note down the url of the s3 bucket created. 
-- To run the tests you need to have an Android apk with the name app-debug.apk and a TestNG distribution with all dependencies in the app folder. You can build the apk from our sample app code at  https://github.com/aws-samples/aws-device-farm-sample-app-for-android and the tests zip can created by building the project at https://github.com/aws-samples/aws-device-farm-appium-tests-for-sample-app
-- copy the output from the above builds to the app folder. The apk should be name 'app-debug.apk' and the tests zip should be name 'zip-with-dependencies.zip'
+- To run the tests you need to have an Android apk and a TestNG distribution with all dependencies in the app folder. You can build the apk from our sample app code at  https://github.com/aws-samples/aws-device-farm-sample-app-for-android and the tests zip can created by building the project at https://github.com/aws-samples/aws-device-farm-appium-tests-for-sample-app
+- copy the output from the above builds to the app folder. The apk should be named 'app-debug.apk' and the tests zip should be named 'zip-with-dependencies.zip'
 - Change the permissions and the execute the `./uploadzip.sh` command using the commands below. Replace `<s3-url>` with the url noted above 
 ```
 chmod a+x uploadzip.sh
